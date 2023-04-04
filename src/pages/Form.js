@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser } from "./store/slices/userSlice";
-import { removeUser } from "./store/slices/userSlice";
-import { editUser } from "./store/slices/userSlice";
+import { addUser } from "./slices/userSlice";
+import { removeUser } from "./slices/userSlice";
+import { editUser } from "./slices/userSlice";
 
 const Form = () => {
   const [fName, setFname] = useState("");
