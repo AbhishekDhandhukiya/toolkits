@@ -7,18 +7,18 @@ const userSlice = createSlice({
   },
   reducers: {
     addUser(state, action) {
-      state.userData =  [...state.userData, action.payload];
+      state.userData = [...state.userData, action.payload];
       console.log(action.payload);
     },
 
     editUser(state, action) {
       const editData = state.userData;
-      // for (let i = 0; i < editData.length; i++) { 
-      //   if (i === action.payload.index) {
-      //     state.userData[i] = action.payload.data;
-      //     console.log(state.userData[i]);
-      //   }
-      // }
+      for (let i = 0; i < editData.length; i++) { 
+        if (i === action.payload.index) {
+          state.userData[i] = action.payload.data;
+          console.log(state.userData[i]);
+        }
+      }
     },
 
     removeUser(state, action) {
